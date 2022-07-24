@@ -11,12 +11,12 @@ export class WeatherService {
 
   constructor(private http: HttpClient) { }
 
-  getWeather(city:string): Observable<Weather> {
+  getWeather(city: string): Observable<Weather> {
     const options = new HttpParams()
-      .set('units', 'metrics')
+      .set('units', 'metric')
       .set('q', city)
       .set('appId', environment.apiKey);
-    
-      return this.http.get<Weather>(environment.apiUrl + 'weather', { params: options });
+
+    return this.http.get<Weather>(environment.apiUrl + 'weather', { params: options });
   }
 }
