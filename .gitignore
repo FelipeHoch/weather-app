@@ -42,3 +42,8 @@ src/environments/
 .DS_Store
 Thumbs.db
 
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json
